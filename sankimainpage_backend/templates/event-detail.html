@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanki Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/assets/css/styles.css">
+    <link rel="stylesheet" href="/static/assets/css/event-detail.css">
+    <link rel="icon" href="/static/assets/img/SANKIEVENTS.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top position-relative ">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="/static/assets/img/sanki_logo.png" class="logo" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Event Banner -->
+    <section id="event-banner" class=" position-relative ">
+        <div class="event-banner-image">
+            <img  id="event-banner-bg" src=""
+                alt="Loading..">
+            <img  id="event-banner-img" src=""
+                alt="Loading..">
+        </div>  
+
+    </section>
+
+    <!-- Event Details -->
+
+
+    <section id="event-details" class="py-5">
+        <div class="container event-banner-content mb-4">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="event-category music">Music</div>
+                    <h1 class="event-title"></h1>
+                    <div class="event-meta">
+                        <div id="event-date" class="event-meta-item">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Loading...</span>
+                        </div>
+                        <div id="event-time" class="event-meta-item">
+                            <i class="far fa-clock"></i>
+                            <span>Loading...</span>
+                        </div>
+                        <div id="event-venue" class="event-meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="event-ticket-card">
+
+                        <a href="" id="get-tickets" class=" btn btn-lg btn-accent w-100 mt-3">
+                            <i class="fas fa-ticket-alt me-2"></i>Get Tickets
+                        </a>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Event Description -->
+                    <div class="event-description-card mb-4">
+                        <h2 class="section-title">About This Event</h2>
+                        <div id="event-description" class="event-description">
+                            <p>Loading...</p>
+{% comment %} 
+                            <p>The Summer Rock Festival brings together rock enthusiasts from all over the country for a
+                                day filled with amazing performances, great food, and an electric atmosphere. From
+                                classic rock to modern alternative, there's something for every rock fan.</p>
+
+                            <h3>Lineup Highlights:</h3>
+                            <ul>
+                                <li>The Rolling Stones (Headliner)</li>
+                                <li>Foo Fighters</li>
+                                <li>Arctic Monkeys</li>
+                                <li>The Killers</li>
+                                <li>And many more!</li>
+                            </ul>
+
+                            <h3>What to Expect:</h3>
+                            <ul>
+                                <li>8+ hours of live music across three stages</li>
+                                <li>Food and drink vendors offering a variety of options</li>
+                                <li>Merchandise stands</li>
+                                <li>VIP areas with premium viewing and exclusive bars</li>
+                                <li>Festival activities and interactive experiences</li>
+                            </ul>
+
+                            <p>Don't miss out on the rock event of the year! Tickets are selling fast, so secure yours
+                                today.</p> {% endcomment %}
+                        </div>
+                    </div>
+
+                    <!-- Event Location -->
+                    <div class="event-location-card mb-4">
+                        <h2 class="section-title">Location</h2>
+                        <div id="event-location-link" class="event-map">
+                            <iframe
+                                src=""
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div id="event-location-about" class="event-location-details mt-3">
+                            <h4></h4>
+                            <p id="event-location-about-address"> <i class="fas fa-map-marker-alt me-2"></i>Central Park, New York, NY 10022</p>
+                            {% comment %} <p><i class="fas fa-directions me-2"></i><a href="https://maps.google.com"
+                                    target="_blank">Get Directions</a></p> {% endcomment %}
+                        </div>
+                    </div>
+
+                    <!-- Event Gallery -->
+                    <div class="event-gallery-card mb-4">
+                        <h2 class="section-title">Gallery from Past Editions</h2>
+                        <div id="gallery-container" class="row g-2 event-gallery-grid">
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Ticket Section -->
+                    <div id="ticket-section" class="ticket-section-card mb-4">
+                        <h2 class="section-title">Get Tickets</h2>
+                        <div id="ticket-options" class="ticket-options">
+
+                                
+                        </div>
+                      
+                    </div>
+
+                    <!-- Organizer Info -->
+                    <div class="organizer-card mb-4">
+                        <h2 class="section-title">Artists</h2>
+                        <div id = artists-list>
+                            
+                           
+
+                        </div>
+                        
+                    </div>
+
+                    <!-- Related Events -->
+                    <div class="related-events-card">
+                        <h2 class="section-title">You Might Also Like</h2>
+                        <div id="related-events-list" class="related-events-list">
+                            
+                            {% comment %} <div class="related-event-item">
+                                <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                                    alt="90s Throwback">
+                                <div class="related-event-info">
+                                    <h4>90s Throwback Concert</h4>
+                                    <p><i class="far fa-calendar-alt me-2"></i>September 8, 2025</p>
+                                    <span class="related-event-price">$49.99</span>
+                                </div>
+                            </div> {% endcomment %}
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Gallery Modal -->
+    <div class="modal fade" id="eventGalleryModal" tabindex="-1" aria-labelledby="eventGalleryModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="eventGalleryModalLabel">Summer Rock Festival Gallery</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img  id="eventGalleryModalImage" class="img-fluid w-100" alt="Gallery Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-10 mb-4 mb-lg-0">
+                    <a class="footer-brand" href="#">
+                        <a class="navbar-brand" href="#">
+                            <img src="/static/assets/img/sanki_logo.png" class="logo" alt="">
+                        </a>
+                    </a>
+                    <p class="mt-3">Your premier destination for discovering and booking tickets to the most exciting
+                        events in your city.</p>
+                    <div class="footer-social social-icons mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        <a  target="_blank"  href="https://www.instagram.com/sankievents/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a  target="_blank"  href="https://www.linkedin.com/company/sanki-events/posts/?feedView=all" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+         
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 ">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="/#events">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/products">Products</a></li>
+                        <li><a href="/#gallery">Gallery</a></li>  
+                        <li><a href="/#faq">FAQ</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                {% comment %} <div class="col-6 col-md-4 col-lg-2">
+                    
+                    <!-- <ul class="footer-links">
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Theater</a></li>
+                        <li><a href="#">Comedy</a></li>
+                        <li><a href="#">Arts</a></li>
+                    </ul> -->
+                </div> {% endcomment %}
+                
+            </div>
+            <hr class="mt-5 mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Sanki Events. All rights reserved.</p>
+                    <p class="mb-0">Developed by <a href="https://www.dynamiclabz.net/" class="fw-bold text-decoration-underline text">Dynamic Labz</a></p>
+
+                </div>
+                
+                <div class="col-md-6 mt-3 mt-md-0">
+                    {% comment %} <ul class="footer-bottom-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/js/script.js"></script>
+    <script src="/static/assets/js/event-detail.js"></script>
+    <script src="/static/assets/js/api_caller.js"></script>
+    <script>
+        
+    </script>
+    <script>
+        
+        window.onload = async function () {
+            
+            await fetchEvent();
+          };
+    
+        async function fetchEvent() {
+            
+            try{
+                const event_id = new URLSearchParams(window.location.search).get(
+                    "event_id"
+                );
+                
+                
+                // Example Params object
+                const Params = {
+                    event_id: event_id, // Assuming event_id is defined elsewhere in your script
+                };
+                
+                console.log("load");
+                
+                // Construct the base URL using the Django template tag for the API endpoint
+                const baseUrl = "{% url 'event-detail-api-list' %}"; // This will be rendered as /events/event-detail-api
+                
+                // Construct the full URL by appending the query string
+                const url = baseUrl + "?" + toQueryString(Params); // Combine the base URL with the query string
+                
+                const [success,result]= await callApi("GET",url);
+                if(success){
+                    data = result.data;
+                    console.log(data)
+                    event_data= data.event_data;
+                    // Given date in dd-mm-yyyy format
+                    
+                    
+                    const getTicketsButton = document.getElementById("get-tickets");
+                    getTicketsButton.setAttribute("href", `https://wa.me/${event_data.whatsapp_number}?text=${encodeURIComponent(event_data.whatsapp_message)}`);
+                    // Split the date string into day, month, and year
+                    let dateString = event_data.event_date_range;
+                    function formatDateRange(inputDate) {
+                        // Split the input by '|' to get both date parts
+                        const [startDate, endDate] = inputDate.split('|').map(date => date.trim());
+                    
+                        // Helper function to format date to "8th Oct, 2025"
+                        function formatDate(dateStr) {
+                            const [day, month, year] = dateStr.split('-').map(num => parseInt(num, 10));
+                    
+                            // Array of month names
+                            const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                    
+                            // Helper function to get the ordinal suffix (st, nd, rd, th)
+                            function getOrdinalSuffix(day) {
+                                if (day > 3 && day < 21) return 'th'; // Catch 11-13
+                                switch (day % 10) {
+                                    case 1: return 'st';
+                                    case 2: return 'nd';
+                                    case 3: return 'rd';
+                                    default: return 'th';
+                                }
+                            }
+                    
+                            // Get the formatted date string
+                            const formattedDate = `${day}${getOrdinalSuffix(day)} ${monthNames[month - 1]}, ${year}`;
+                            return formattedDate;
+                        }
+                    
+                        // Format both start and end dates
+                        const formattedStartDate = formatDate(startDate);
+                        const formattedEndDate = formatDate(endDate);
+                    
+                        // Return the final formatted date range
+                        console.log(formattedStartDate, formattedEndDate)
+                        return `${formattedStartDate} - ${formattedEndDate}`;
+                    }
+                    let outputdate = formatDateRange(dateString);
+                    const eventDate = document.getElementById("event-date").querySelector("span");
+
+                    eventDate.textContent = outputdate;
+                    document.title = `${event_data.event_name} - Sanki Events`;
+
+
+                    const eventBannerImage = document.getElementById("event-banner-img");
+                    const eventBannerImagebg = document.getElementById("event-banner-bg");
+                    // Dynamically change the src of the image to the event's title image
+                    eventBannerImage.src = event_data.event_title_img;
+                    eventBannerImagebg.src = event_data.event_title_img;
+                
+                    const eventTitle = document.querySelector(".event-title");
+                    eventTitle.textContent = event_data.event_name;
+                    
+                    
+                    
+                    const eventTime = document.getElementById("event-time").querySelector("span");
+                    eventTime.textContent = `${event_data.event_time}`;
+
+                    const eventVenue = document.getElementById("event-venue").querySelector("span");
+                    eventVenue.textContent = event_data.event_venue;
+
+                    const eventDescription = document.getElementById("event-description").querySelector("p");
+                    eventDescription.textContent = event_data.event_details;
+
+                    const eventLocation = document.getElementById("event-location-link").querySelector("iframe");
+                    eventLocation.src = event_data.location_link;
+
+                    const eventaboutlocation = document.getElementById("event-location-about").querySelector("h4");
+                    eventaboutlocation.textContent= event_data.event_venue;
+
+                    const eventaboutaddress = document.getElementById("event-location-about-address");
+                    eventaboutaddress.innerHTML = `<i class="fas fa-map-marker-alt me-2"></i> ${event_data.event_address}`;
+
+                    
+
+                    const galleryContainer = document.getElementById("gallery-container");
+
+                    event_data.event_gallery_imgs.forEach(photo => {
+                        const galleryItem = document.createElement("div");
+                        galleryItem.classList.add("col-12");
+                        galleryItem.classList.add("col-md-6");
+                        galleryItem.classList.add("col-lg-4");
+                        galleryItem.classList.add("gallery-area");
+
+                        // Extract file extension to detect whether it's an image or video
+                        const fileExtension = photo.banner_image.split('.').pop().toLowerCase();
+
+                        // Check if the file is a video (you can adjust the list of video extensions as needed)
+                        const videoExtensions = ['mp4', 'webm', 'ogg'];
+                        
+                        if (videoExtensions.includes(fileExtension)) {
+                            galleryItem.innerHTML = `
+                                <div class="gallery-item">
+                                    <video id="event-gallery-bg" autoplay loop muted>
+                                        <source src="${photo.banner_image}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <video id="event-gallery-img" autoplay loop muted>
+                                        <source src="${photo.banner_image}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            `;
+                        } else {
+                            galleryItem.innerHTML = `
+                                <div class="gallery-item">
+                                    <img id="event-gallery-bg" src="${photo.banner_image}" alt="Banner Image">
+                                    <img id="event-gallery-img" src="${photo.banner_image}" alt="Banner Image">
+                                </div>
+                            `;
+                        }
+
+                        // Append the gallery item to the gallery container
+                        galleryContainer.appendChild(galleryItem);
+                    });
+
+                    
+
+                    const artistsList =  document.getElementById("artists-list");
+                    
+                        const Item = document.createElement("div");
+                        Item.classList.add("organizer-info");
+                
+                        Item.innerHTML = `
+                            <img src="${event_data.artist_image}" alt="Event Organizer"
+                                    class="organizer-avatar">
+                                <div class="organizer-details">
+                                    <h4>${event_data.artist_name}</h4>
+                                    <p>${event_data.artist_description}</p>
+                                   
+                                       
+                                </div>
+                            </div>
+                        `;
+                        artistsList.appendChild(Item);
+
+                    const ticketoptions = document.getElementById("ticket-options");
+                    const ticketItem = document.createElement("div");
+                        ticketItem.classList.add("ticket-option-card");
+                        ticketItem.classList.add("featured");
+                
+                        ticketItem.innerHTML = `
+                                
+                                <div class="ticket-option-header">
+                                    <span class="ticket-price ">₹${event_data.ticket_price}</span>
+                                    <h3 class ="">${event_data.ticket_name}</h3>
+                                    
+                                </div>
+                        `;
+                        ticketoptions.appendChild(ticketItem);
+                      
+                    //you might like us 
+                    const url ="{% url 'all-events-api-list'%}?";
+            
+                    const [success1,result1]= await callApi("GET",url);
+                    if(success1){
+                       
+                        const eventsList = document.getElementById("related-events-list");
+                        data1 = result1.data;
+                        event_list= data1.events_list;
+                        
+                        event_list.forEach(event1 => {
+                        const eventItem = `
+                                <a href="/event/?event_id=${event1.event_id}" class="related-event-item">
+                                    <img src="${event1.event_title_img}"
+                                        alt="Event Image">
+                                    <div class="related-event-info">
+                                        <h4>${event1.event_name}</h4>
+                                        <span class="related-event-price">₹${event1.ticket_price}</span>
+                                    </div>
+                                </a>
+                                `;
+                            
+                            eventsList.innerHTML += eventItem;
+                        });
+                        
+
+                        }
+                    
+                    
+                }
+
+            }
+                catch{
+    
+            }
+        }
+        
+    
+    
+    </script>
+</body>
+
+</html>

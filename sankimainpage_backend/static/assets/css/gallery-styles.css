@@ -1,0 +1,143 @@
+/* Gallery Section Styles */
+.social-banner {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.social-banner h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hashtag {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.gallery-container {
+  margin-top: 2rem;
+}
+
+.gallery-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  cursor: pointer;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.8) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-info {
+  width: 100%;
+}
+
+.gallery-info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: white;
+}
+
+.gallery-info p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.gallery-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.gallery-icon {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.gallery-icon:hover {
+  background-color: var(--accent-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.modal-content {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+.modal-header {
+  border-bottom-color: var(--border-color);
+}
+
+.modal-image-details {
+  padding: 1rem 0;
+}
+
+.social-share-icon {
+  width: 35px;
+  height: 35px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  margin-left: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-share-icon:hover {
+  background-color: var(--accent-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Responsive styles for gallery */
+@media (max-width: 767.98px) {
+  .gallery-card img {
+    height: 30vh;
+  }
+
+  .gallery-overlay {
+    padding: 1rem;
+  }
+
+  .gallery-info h4 {
+    font-size: 1rem;
+  }
+}
